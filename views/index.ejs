@@ -1,10 +1,11 @@
 <%- include('./includes/header.ejs')%>
 <main class="form-signin">
-    <form>
+
+    <form action="/search" method="POST">
         <img class="mb-4" src="/img/book.png" alt="" width="72" height="57">
         <h1 class="h3 mb-3 fw-normal">کتاب یاب</h1>
         <div class="form-floating">
-            <input type="text"  class="form-control" id="floatingInput" placeholder="عنوان کتاب به زبان انگلیسی">
+            <input type="text"  class="form-control" name="title" id="floatingInput" placeholder="عنوان کتاب به زبان انگلیسی">
         </div>
         <button class="w-100 btn btn-lg btn-primary mt-3" type="submit">جستجو</button>
         <p class="mt-5 mb-3 text-muted" dir="ltr">&copy; Malekzad 2017–2021</p>

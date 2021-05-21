@@ -4,6 +4,7 @@ const path = require('path');
 const express = require('express');
 const dotEnv = require('dotenv');
 const morgan = require('morgan');
+const bodyParser = require('body-parser');
 
 const connectDB = require('./config/db');
 
@@ -19,7 +20,9 @@ const app = express();
 if (process.env.NODE_ENV === 'development') {
     app.use(morgan('dev'));
 }
-
+//body-parser
+app.use(bodyParser.json());
+app.use(bodyParser.urlencoded({extended: false}));
 
 
 
